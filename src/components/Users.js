@@ -39,11 +39,6 @@ class Users extends Component {
             </button>
             <br />
             {user && <img height='100' src={user.photo} alt='profile' />}
-            <ul>
-              {users.map(user => (
-                <li key={user.id}>{user.username}</li>
-              ))}
-            </ul>
           </div>
         ) : (
           <div>

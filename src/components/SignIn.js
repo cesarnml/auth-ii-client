@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import SocialLinks from '../components/SocialLinks'
+import SocialLinks from './SocialLinks'
 import axios from 'axios'
 axios.defaults.withCredentials = true
 // const serverAPI = 'http://localhost:8000/api'

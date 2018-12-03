@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import SocialLinks from '../components/SocialLinks'
+import SocialLinks from './SocialLinks'
 axios.defaults.withCredentials = true
 const initialState = { email: '', password: '' }
 // const serverAPI = 'http://localhost:8000/api'
@@ -20,7 +20,7 @@ class SignUp extends Component {
         <label>Email: </label>
         <input
           name='email'
-          type='text'
+          type='email'
           placeholder='Enter email'
           value={email}
           onChange={this.handleInputChange}
