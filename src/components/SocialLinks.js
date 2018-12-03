@@ -6,7 +6,6 @@ import {
 } from 'react-social-login-buttons'
 const SocialLinks = props => {
   const authURL = 'https://authiidb.herokuapp.com/api/auth'
-  // const authURL = 'http://localhost:8000/api/auth'
   return (
     <Fragment>
       <FacebookLoginButton
