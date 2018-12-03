@@ -3,9 +3,9 @@ import axios from 'axios'
 import SocialLinks from './SocialLinks'
 axios.defaults.withCredentials = true
 const initialState = { email: '', password: '' }
-const serverAPI = 'https://authiidb.herokuapp.com/api'
 class SignUp extends Component {
   state = initialState
+  serverAPI = 'https://authiidb.herokuapp.com/api'
 
   render () {
     const { email, password } = this.state
@@ -53,7 +53,7 @@ class SignUp extends Component {
     e.preventDefault()
 
     axios
-      .post(`${serverAPI}/register`, this.state)
+      .post(`${this.serverAPI}/register`, this.state)
       .then(res => this.setState(initialState))
       .then(() => this.props.history.push('/users'))
       .catch(err => console.error(err))
