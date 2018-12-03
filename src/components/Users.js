@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 axios.defaults.withCredentials = true
 // const serverAPI = 'http://localhost:8000/api'
-const serverAPI = 'https://guarded-sands-18679.herokuapp.com/api'
+const serverAPI = 'https://authiidb.herokuapp.com/api'
 class Users extends Component {
   state = {
     user: null,
