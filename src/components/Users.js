@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 axios.defaults.withCredentials = true
-const serverAPI = 'https://authiidb.herokuapp.com/api'
+// const serverURL = 'https://authiidb.herokuapp.com'
+const serverURL = 'http://localhost:8000'
 class Users extends Component {
   state = {
     user: null,
@@ -12,7 +13,7 @@ class Users extends Component {
 
   componentDidMount () {
     axios
-      .get(`${serverAPI}/users`)
+      .get(`${serverURL}/api/users`)
       .then(res => {
         const { users, user } = res.data
         this.setState({ user, users, loggedIn: true, loading: false })
@@ -25,7 +26,7 @@ class Users extends Component {
   }
 
   render () {
-    const { user, users, loggedIn, loading } = this.state
+    const { user, loggedIn, loading } = this.state
     return (
       <div className='Users'>
         {loggedIn && !loading ? (
@@ -60,7 +61,7 @@ class Users extends Component {
   handleButtonClick = e => {
     e.preventDefault()
     axios
-      .get(`${serverAPI}/logout`)
+      .get(`${serverURL}/api/logout`)
       .then(res =>
         this.setState({ loggedIn: false, users: [], user: null, loading: true })
       )

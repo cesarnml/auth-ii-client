@@ -4,22 +4,27 @@ import {
   GoogleLoginButton,
   GithubLoginButton
 } from 'react-social-login-buttons'
+
+// const serverURL = 'https://authiidb.herokuapp.com'
+const serverURL = 'http://localhost:8000'
+
 const SocialLinks = props => {
-  const authURL = 'https://authiidb.herokuapp.com/api/auth'
   return (
     <Fragment>
       <FacebookLoginButton
-        onClick={() => (window.location.href = `${authURL}/facebook`)}
+        onClick={() =>
+          (window.location.href = `${serverURL}/api/auth/facebook`)
+        }
       >
         <span>{props.action} with Facebook</span>
       </FacebookLoginButton>
       <GoogleLoginButton
-        onClick={() => (window.location.href = `${authURL}/google`)}
+        onClick={() => (window.location.href = `${serverURL}/api/auth/google`)}
       >
         <span>{props.action} with Google</span>
       </GoogleLoginButton>
       <GithubLoginButton
-        onClick={() => (window.location.href = `${authURL}/github`)}
+        onClick={() => (window.location.href = `${serverURL}/api/auth/github`)}
       >
         <span>{props.action} with Github</span>
       </GithubLoginButton>
