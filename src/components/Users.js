@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 axios.defaults.withCredentials = true
-// const serverURL = 'https://authiidb.herokuapp.com'
-const serverURL = 'http://localhost:8000'
+const serverURL = 'https://murmuring-reef-62458.herokuapp.com'
+// const serverURL = 'http://localhost:8000'
 class Users extends Component {
   state = {
     user: null,

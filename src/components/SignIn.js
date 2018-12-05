@@ -3,8 +3,8 @@ import SocialLinks from './SocialLinks'
 import axios from 'axios'
 axios.defaults.withCredentials = true
 const initialState = { email: '', password: '' }
-// const serverURL = 'https://authiidb.herokuapp.com'
-const serverURL = 'http://localhost:8000'
+const serverURL = 'https://murmuring-reef-62458.herokuapp.com'
+// const serverURL = 'http://localhost:8000'
 
 class SignIn extends Component {
   state = initialState
