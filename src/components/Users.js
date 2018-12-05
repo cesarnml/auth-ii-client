@@ -39,6 +39,7 @@ class Users extends Component {
             </button>
             <br />
             {user && <img height='100' src={user.photo} alt='profile' />}
+            <p>Logged in successfully!</p>
           </div>
         ) : (
           <div>
