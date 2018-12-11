@@ -56,7 +56,7 @@ class SignIn extends Component {
     e.preventDefault()
 
     axios
-      .post(`${serverURL}/api/login`, this.state)
+      .post(`${serverURL}/auth/login`, this.state)
       .then(res => this.setState(initialState))
       .then(() => this.props.history.push('/users'))
       .catch(err => console.error(err))

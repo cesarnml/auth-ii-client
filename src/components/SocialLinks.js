@@ -12,19 +12,17 @@ const SocialLinks = props => {
   return (
     <Fragment>
       <FacebookLoginButton
-        onClick={() =>
-          (window.location.href = `${serverURL}/api/auth/facebook`)
-        }
+        onClick={() => (window.location.href = `${serverURL}/auth/facebook`)}
       >
         <span>{props.action} with Facebook</span>
       </FacebookLoginButton>
       <GoogleLoginButton
-        onClick={() => (window.location.href = `${serverURL}/api/auth/google`)}
+        onClick={() => (window.location.href = `${serverURL}/auth/google`)}
       >
         <span>{props.action} with Google</span>
       </GoogleLoginButton>
       <GithubLoginButton
-        onClick={() => (window.location.href = `${serverURL}/api/auth/github`)}
+        onClick={() => (window.location.href = `${serverURL}/auth/github`)}
       >
         <span>{props.action} with Github</span>
       </GithubLoginButton>
