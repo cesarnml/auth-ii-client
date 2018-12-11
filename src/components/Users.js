@@ -39,7 +39,11 @@ class Users extends Component {
             <br />
             {user && <img height='100' src={user.photo} alt='profile' />}
             <p>Logged in successfully!</p>
-            {users.map(user => <div key={user.id}>{user.email}</div>)}
+            <div>
+              {users.map(user => (
+                <div key={user.id}>{user.email}</div>
+              ))}
+            </div>
           </div>
         ) : (
           <div>
