@@ -61,7 +61,7 @@ class Users extends Component {
   handleButtonClick = e => {
     e.preventDefault()
     axios
-      .get(`${process.env.REACT_APP_SERVER_URL}/api/logout`)
+      .get(`${process.env.REACT_APP_SERVER_URL}/auth/logout`)
       .then(res =>
         this.setState({ loggedIn: false, users: [], user: null, loading: true })
       )
