@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Home = () => {
-  return <div>{process.env.REACT_APP_TEST}</div>
+  return <div>Welcome to the WebApp!</div>
 }
 
 export default Home

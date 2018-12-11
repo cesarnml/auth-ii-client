@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 axios.defaults.withCredentials = true
-const serverURL = 'https://murmuring-reef-62458.herokuapp.com'
-// const serverURL = 'http://localhost:8000'
+
 class Users extends Component {
   state = {
     user: null,
@@ -13,7 +12,7 @@ class Users extends Component {
 
   componentDidMount () {
     axios
-      .get(`${serverURL}/api/users`)
+      .get(`${process.env.REACT_APP_SERVER_URL}/api/users`)
       .then(res => {
         const { users, user } = res.data
         this.setState({ user, users, loggedIn: true, loading: false })
@@ -62,7 +61,7 @@ class Users extends Component {
   handleButtonClick = e => {
     e.preventDefault()
     axios
-      .get(`${serverURL}/api/logout`)
+      .get(`${process.env.REACT_APP_SERVER_URL}/api/logout`)
       .then(res =>
         this.setState({ loggedIn: false, users: [], user: null, loading: true })
       )

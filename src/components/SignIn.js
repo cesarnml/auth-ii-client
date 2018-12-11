@@ -3,8 +3,6 @@ import SocialLinks from './SocialLinks'
 import axios from 'axios'
 axios.defaults.withCredentials = true
 const initialState = { email: '', password: '' }
-const serverURL = 'https://murmuring-reef-62458.herokuapp.com'
-// const serverURL = 'http://localhost:8000'
 
 class SignIn extends Component {
   state = initialState
@@ -56,7 +54,7 @@ class SignIn extends Component {
     e.preventDefault()
 
     axios
-      .post(`${serverURL}/auth/login`, this.state)
+      .post(`${process.env.REACT_APP_SERVER_URL}/auth/login`, this.state)
       .then(res => this.setState(initialState))
       .then(() => this.props.history.push('/users'))
       .catch(err => console.error(err))
